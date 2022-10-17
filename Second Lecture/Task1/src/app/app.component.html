@@ -1,0 +1,13 @@
+<p [ngStyle]="newClasses">Using ng Style</p>
+
+<p [class.newStyle]="isNewClassApply">Using Style</p>
+
+<p [ngClass]="{newStyle:'isNewClassApply'}">New Element</p>
+
+
+<input [(ngModel)]="studentName" />
+
+<br/>
+<input [(ngModel)]="studentName" (ngModelChange)="toLowerCase($event)"/>
+
+<p customDirective [backGroundColor]="'pink'">My Custom Directive</p>

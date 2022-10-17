@@ -1,0 +1,32 @@
+<h1>Template Driven Form Example</h1>
+
+<form #userForm="ngForm">
+	<div>
+		<label for="name">Name</label>
+		<input id="name" 
+           name="name"
+           type="text"
+           required
+           [(ngModel)]="user.name" />
+  </div>
+
+  <div>
+    <label for="surname">Surname</label>
+    <input id="surname"  
+           name="surname" 
+           type="text" 
+           required
+           [(ngModel)]="user.surname" />
+  </div>
+
+  <button type="button" (click)="submit()">Submit</button>
+</form>
+
+<h3>Form data</h3>
+{{user | json}}
+
+<h3>Form state</h3>
+<p>Valid: {{userForm.valid}}</p>
+<p>Pristine:  {{userForm.pristine}}</p>
+<p>Touched:  {{userForm.touched}}</p>
+<p>Submitted: {{userForm.submitted}}</p>
